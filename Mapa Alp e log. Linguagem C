@@ -29,7 +29,7 @@ void cadastrarVacina (){
     scanf ("%s", &cadastro[i].vacina);
     printf ("Digite a data da vacina: \n");
     scanf ("%s", &cadastro[i].data);
-    printf ("Digite o número do lote impresso no verso da ampola: \n");
+    printf ("Digite o nÃºmero do lote impresso no verso da ampola: \n");
     scanf ("%d", &cadastro[i].numLote);
     i++;
 }
@@ -37,7 +37,7 @@ void cadastrarVacina (){
 void listarAplicacoes (){
 	printf ("\nPacientes vacinados:\n");
 	for (j = 0; j < i; j++){
-		printf("Código: %d\n", cadastro[j].codigo);
+		printf("CÃ³digo: %d\n", cadastro[j].codigo);
 		printf("%s\n", cadastro[j].nome);
 		printf("%s \n", cadastro[j].cpf);
 		printf("%s\n", cadastro[j].vacina);
@@ -53,7 +53,7 @@ void consultarPorCPF(){
 	for(k = 0; k < i; k++){
 		if(strcmp(buscarCPF, cadastro[k].cpf) == 0){
 			printf("CPF encontrado. Imprimindo dados...\n");
-			printf("Código: %d\n", cadastro[k].codigo);
+			printf("CÃ³digo: %d\n", cadastro[k].codigo);
 			printf("%s\n", cadastro[k].nome);
 			printf("%s \n", cadastro[k].cpf);
 			printf("%s\n", cadastro[k].vacina);
@@ -61,7 +61,7 @@ void consultarPorCPF(){
 			printf("%d\n", cadastro[k].numLote);
 		}
 		else{
-			printf("CPF não encontrado!");
+			printf("CPF nÃ£o encontrado!");
 		}
 	}
 }		
@@ -69,7 +69,7 @@ int main(void) {
   setlocale (LC_ALL, "Portuguese");
   int opcao;
   do{
-    printf ("Selecione a opção desejada:\n1) Cadastrar vacina. \n2) Listar aplicações. \n3) Consultar por CPF. \n4) Sair.\n");
+    printf ("Selecione a opÃ§Ã£o desejada:\n1) Cadastrar vacina. \n2) Listar aplicaÃ§Ãµes. \n3) Consultar por CPF. \n4) Sair.\n");
     scanf ("%d", &opcao);
     switch (opcao){
       case 1:{
@@ -86,11 +86,11 @@ int main(void) {
 		break;
 	  }
 	  case 4: {
-	  	printf("Até logo!");
+	  	printf("AtÃ© logo!");
 		break;
 	  }
 	  default:{
-	  	printf("Opção inválida!\n");
+	  	printf("OpÃ§Ã£o invÃ¡lida!\n");
 		break;
 	  }
     }
